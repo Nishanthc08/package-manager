@@ -169,7 +169,3 @@ see [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute. see [ROADMAP.md](R
 ## license
 
 MIT — do whatever you want with it. see [LICENSE](LICENSE).
-
----
-
-*namma oorina style — built in Bengaluru, for everyone*
