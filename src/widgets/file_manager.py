@@ -2,14 +2,13 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-from PySide6.QtCore import Qt, Signal, QMimeData
-from PySide6.QtGui import QDragEnterEvent, QDropEvent, QIcon
+from PySide6.QtCore import Qt, Signal
+from PySide6.QtGui import QDragEnterEvent, QDropEvent
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QTreeWidget, QTreeWidgetItem,
     QLabel, QPushButton, QFileSystemModel, QTreeView, QSplitter,
     QHeaderView, QDialog, QFormLayout, QLineEdit, QComboBox,
-    QCheckBox, QDialogButtonBox, QMessageBox, QMenu, QFrame,
-    QAbstractItemView,
+    QCheckBox, QDialogButtonBox, QMenu, QAbstractItemView,
 )
 
 from src.models.package import PackageFile

@@ -1,14 +1,13 @@
 from __future__ import annotations
 import sys
-from pathlib import Path
 
-from PySide6.QtCore import Qt, QSize
-from PySide6.QtGui import QIcon, QFont, QAction, QKeySequence
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QAction, QKeySequence
 from PySide6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
-    QListWidget, QListWidgetItem, QStackedWidget, QLabel,
-    QStatusBar, QToolBar, QMenu, QMenuBar, QMessageBox, QSplitter,
-    QFrame, QPushButton, QSizePolicy,
+    QStackedWidget, QLabel,
+    QStatusBar, QMessageBox, QSplitter,
+    QFrame, QPushButton,
 )
 
 from src.widgets.wizard import PackageWizard

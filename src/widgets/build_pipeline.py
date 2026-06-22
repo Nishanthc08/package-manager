@@ -1,5 +1,4 @@
 from __future__ import annotations
-import json
 from datetime import datetime
 from pathlib import Path
 from threading import Thread
@@ -8,7 +7,7 @@ from PySide6.QtCore import Qt, Signal, QObject, QProcess
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton,
     QTableWidget, QTableWidgetItem, QHeaderView, QProgressBar,
-    QPlainTextEdit, QSplitter, QFrame, QMessageBox, QTabWidget,
+    QPlainTextEdit, QSplitter, QMessageBox,
     QAbstractItemView, QComboBox,
 )
 from PySide6.QtGui import QColor, QTextCursor, QTextCharFormat

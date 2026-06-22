@@ -1,15 +1,13 @@
 from __future__ import annotations
-import os
 import shutil
-import subprocess
 from pathlib import Path
 
-from PySide6.QtCore import Qt, QThread, Signal
+from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QPushButton, QTableWidget, QTableWidgetItem, QHeaderView,
     QGroupBox, QFormLayout, QFileDialog, QMessageBox, QTextEdit,
-    QSplitter, QCheckBox, QAbstractItemView, QComboBox, QFrame,
+    QSplitter, QAbstractItemView, QComboBox,
 )
 
 from src.models.build import RepositoryConfig

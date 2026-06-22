@@ -1,16 +1,13 @@
 from __future__ import annotations
 import json
-from pathlib import Path
 
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QListWidget,
     QListWidgetItem, QPlainTextEdit, QSplitter, QPushButton,
-    QTextEdit, QGroupBox, QFormLayout, QLineEdit, QMessageBox,
-    QFileDialog, QAbstractItemView, QFrame,
+    QMessageBox, QFileDialog,
 )
 
-from src.models.package import PackageConfig
 from src.core.templates import get_template, list_templates, get_template_description
 
 

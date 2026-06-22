@@ -1,17 +1,14 @@
 from __future__ import annotations
 import subprocess
-import re
-from pathlib import Path
 
 from PySide6.QtCore import Qt, QProcess
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit,
     QTreeWidget, QTreeWidgetItem, QHeaderView, QSplitter,
-    QPlainTextEdit, QPushButton, QFrame, QTabWidget,
+    QPlainTextEdit, QPushButton, QTabWidget,
     QAbstractItemView, QMessageBox,
 )
 
-from src.utils.helpers import run_command
 from src.utils.syntax import ControlHighlighter
 
 

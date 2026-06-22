@@ -2,11 +2,11 @@ from __future__ import annotations
 from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QFormLayout, QLineEdit,
-    QTextEdit, QComboBox, QSpinBox, QCheckBox, QLabel, QPushButton,
-    QGroupBox, QScrollArea, QListWidget, QListWidgetItem, QTabWidget,
-    QSplitter, QFrame, QPlainTextEdit, QSizePolicy, QMessageBox,
+    QTextEdit, QComboBox, QCheckBox, QLabel, QPushButton,
+    QListWidget, QListWidgetItem, QTabWidget,
+    QPlainTextEdit, QMessageBox, QSizePolicy,
 )
-from src.models.package import PackageConfig, Dependency, Section, Priority, PackageType
+from src.models.package import PackageConfig, Dependency, Section, Priority
 from src.core.templates import get_template, list_templates, get_template_description
 from src.core.validator import validate_config
 from src.utils.syntax import BashHighlighter, ControlHighlighter
