@@ -1,0 +1,57 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [ published ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install PySide6
+
+      - name: Lint with pyflakes
+        run: |
+          pip install pyflakes
+          pyflakes src/ main.py
+
+      - name: Test imports
+        run: |
+          export QT_QPA_PLATFORM=offscreen
+          python -c "
+          import sys, os
+          sys.path.insert(0, '.')
+          os.environ['QT_QPA_PLATFORM'] = 'offscreen'
+          from PySide6.QtWidgets import QApplication
+          app = QApplication(sys.argv)
+          from src.app import MainWindow
+          win = MainWindow()
+          print(f'OK - {win.windowTitle()} loaded with {win.stack.count()} pages')
+          "
+
+      - name: Build standalone (pyinstaller)
+        run: |
+          pip install pyinstaller
+          pyinstaller --onefile --windowed --name "boss-package-manager" main.py
+        if: github.event_name == 'release'
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: boss-package-manager
+          path: dist/boss-package-manager*
+        if: github.event_name == 'release'

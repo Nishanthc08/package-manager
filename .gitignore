@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+
+# environment
+.env
+.env.local
+
+# build artifacts
+*.deb
+/tmp/package-manager_*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# runtime
+*.log
+logs/
+
+# sensitive
+opencode.txt
+*.pem
+*.key
+*.p12
